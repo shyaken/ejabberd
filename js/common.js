@@ -39,12 +39,19 @@ $(document).bind("connect", function (ev, data) {
 			$(document).trigger("disconnected");        
 		}    
 	}); 
+
+	Hello.connection = conn;
 });
 $(document).bind("connected", function () {    // nothing here yet 
 	console.log("connected");
+	Hello.log("Connection established.");
+	Hello.log("Logged into "+Hello.connection.authzid);
 });
 $(document).bind("disconnected", function () {    // nothing here yet 
 	console.log("disconnected");
+	Hello.log("Connection terminated.");
+	Hello.log("Logged off "+Hello.connection.authzid);
+	Hello.connection = null;
 });
 
 var Hello = {    

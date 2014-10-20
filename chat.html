@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Jquery chat application demo</title>
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/smoothness/jquery-ui.css" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+        <script src="js/checkplayer.js"></script>
+        <script src="js/flensed.js"></script>
+        <script src="js/flXHR.min.js"></script>
+        <script src="js/strophe.js"></script>
+        <script src="js/strophe.flxhr.min.js"></script>
+
+        <link rel="stylesheet" href="css/gab.css" />
+        <script src="js/gab.js"></script>
+    </head>
+    <body>    
+        <h1>Chat, add friend demo app</h1>
+        <div id='toolbar'>
+            <span class='button' id='new-contact'>add contact..</span> ||
+            <span class='button' id='new-chat'>chat with..</span> ||
+            <span class='button' id='disconnect'>disconnect</span>
+        </div>
+        <div id='chat-area'>
+            <ul></ul>
+        </div>
+        <div id='roster-area'>
+            <ul></ul>
+        </div>
+        <!-- login dialog -->
+        <div id='login_dialog' class='hidden'>
+            <label>User email:</label><input type='text' id='jid'>
+            <label>Password:</label><input type='password' id='password'>
+        </div>
+        <!-- contact dialog -->
+        <div id='contact_dialog' class='hidden'>
+            <label>User email:</label><input type='text' id='contact-jid'>
+            <label>Name:</label><input type='text' id='contact-name'>
+        </div>
+        <!-- chat dialog -->
+        <div id='chat_dialog' class='hidden'>
+            <label>User email:</label><input type='text' id='chat-jid'>
+        </div>
+        <!-- approval dialog -->
+        <div id='approve_dialog' class='hidden'>
+            <p><span id='approve-jid'></span> has sent you a friend request. Approve or deny?</p>
+        </div>
+    </body> 
+</html>     
